@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.1.27/spectre.min.css">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    #mainWrapper {
+    padding: 1em;
+    box-sizing: border-box;
+    min-height: 120vh;
+    }
+
+    #infiniteLoadStatus {
+    position: fixed;
+    font-size: 1.6em;
+    padding: 0.8em;
+    background: orange;
+    left: 0.8em;
+    bottom: 2em;
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 7px 7px 20px 0px rgba(50, 50, 50, 0.95);
+    -moz-box-shadow: 7px 7px 20px 0px rgba(50, 50, 50, 0.95);
+    box-shadow: 7px 7px 20px 0px rgba(50, 50, 50, 0.95);
+    color: #fff;
+    }
+    #infiniteLoadStatus.complete {
+    color: olive;
+    }
+
+    .aboutRedux {
+    font-size: 0.36em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    }
+
+    .imgLoadStatus_wrapper {
+    font-weight: bold;
+    }
+
+    #imgLoadStatus {
+    color: blue;
+    }
+
+    #imageContainer {
+    list-style: none;
+    background: #000;
+    margin: 1em 0;
+    padding: 1em;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    }
+    #imageContainer li {
+    width: 100%;
+    margin: 3rm 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="mainWrapper">
+  <h2><b>Tech in Asia </b><br /> Get Infinite Images <br />
+    <span class="aboutRedux"> Powered By Redux</span>
+  </h2>
+  <button id="loadImgs" class="btn btn-primary" style="display:none">Load Images</button>
+
+  <ul id="imageContainer"></ul>
+
+  <span id="infiniteLoadStatus">LOADING</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.min.js"></script>
+<script src="global_utils.js"></script>
+<script src="domNodes.js"></script>
+<script src="action/index.js"></script>
+<script src="middleware/index.js"></script>
+<script src="reducer/index.js"></script>
+<script src="reducer/store.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
